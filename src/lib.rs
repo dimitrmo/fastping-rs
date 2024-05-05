@@ -147,7 +147,7 @@ impl Pinger {
         };
     }
 
-    // stop running the continous pinger
+    // stop running the continuous pinger
     pub fn stop_pinger(&self) {
         let mut stop = self.stop.lock().unwrap();
         *stop = true;
