@@ -27,8 +27,8 @@ use std::time::{Duration, Instant};
 // result type returned by fastping_rs::Pinger::new()
 pub type NewPingerResult = Result<(Pinger, Receiver<PingResult>), String>;
 
-// ping result type.  Idle represents pings that have not received a repsonse within the max_rtt.
-// Receive represents pings which have received a repsonse
+// ping result type.  Idle represents pings that have not received a response within the max_rtt.
+// Receive represents pings which have received a response
 pub enum PingResult {
     Idle { addr: IpAddr },
     Receive { addr: IpAddr, rtt: Duration },
